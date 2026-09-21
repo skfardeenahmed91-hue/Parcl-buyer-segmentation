@@ -1,0 +1,120 @@
+{
+  "log": {
+    "raw_clients": 2000,
+    "raw_properties": 10000,
+    "missing_client_cells": 0,
+    "dup_client_ids": 0,
+    "dup_client_rows_ignoring_id": 0,
+    "dob_unparsed": 0,
+    "dob_slash_format": 1145,
+    "dob_dash_format": 855,
+    "dob_ambiguity_mean_abs_age_diff": 0.1394866529774128,
+    "dob_ambiguity_max_abs_age_diff": 0.8870636550308006,
+    "dup_listing_ids": 0,
+    "sold_listings": 7305,
+    "available_listings": 2695,
+    "orphan_client_refs": 0,
+    "sold_without_client": 0,
+    "date_min": "2024-01-01",
+    "date_max": "2025-12-01"
+  },
+  "best_k": 4,
+  "elbow_k": 5,
+  "n_features": 37,
+  "n_clients": 2000,
+  "silhouette": 0.16453997592744338,
+  "silhouette_ward": 0.13357497761269618,
+  "davies_bouldin": 1.7989008250841918,
+  "calinski_harabasz": 321.34037809343346,
+  "stability": 0.9064324264359787,
+  "ward_ari": 0.7919951427441363,
+  "ward_agreement_pct": 0.9245,
+  "tree_acc": 1.0,
+  "tree_cv": 1.0,
+  "tree_rules": "|--- is_usa <= 0.50\n|   |--- class: S3\n|--- is_usa >  0.50\n|   |--- investment_purpose <= 0.50\n|   |   |--- loan_applied <= 0.50\n|   |   |   |--- class: S1\n|   |   |--- loan_applied >  0.50\n|   |   |   |--- class: S4\n|   |--- investment_purpose >  0.50\n|   |   |--- class: S2\n",
+  "pca_var": [
+    0.15380352780007617,
+    0.1454695290719966
+  ],
+  "segment_meta": {
+    "S1": {
+      "name": "Domestic Cash Home Buyers",
+      "label": "S1 - Domestic Cash Home Buyers",
+      "color": "#1F4E79"
+    },
+    "S2": {
+      "name": "Domestic Investors",
+      "label": "S2 - Domestic Investors",
+      "color": "#E07B39"
+    },
+    "S3": {
+      "name": "International Buyers",
+      "label": "S3 - International Buyers",
+      "color": "#2A9D8F"
+    },
+    "S4": {
+      "name": "Domestic Financed Home Buyers",
+      "label": "S4 - Domestic Financed Home Buyers",
+      "color": "#8E5EA2"
+    }
+  },
+  "top10_share": 0.15561824068462546,
+  "top20_share": 0.28019414602330917,
+  "portfolio_clients": 120,
+  "portfolio_rev_share": 0.09248233090519772,
+  "total_revenue": 2520750960.84,
+  "sold_units": 7305,
+  "listings_2024_per_month": 501.1666666666667,
+  "listings_2025_per_month": 332.1666666666667,
+  "sold_2024_per_month": 367.8333333333333,
+  "sold_2025_per_month": 240.91666666666666,
+  "sell_through": 0.7305,
+  "ppsf_mean": 302.40847103139697,
+  "ppsf_sd": 30.001312372504014,
+  "ppsf_office": 313.83625368618635,
+  "ppsf_apt": 300.42581958285524,
+  "ppsf_time_rho": 0.006806293570991298,
+  "ppsf_time_p": 0.5608116979997166,
+  "area_price_r": 0.9601488337204386,
+  "assoc_median": 0.01129353475121909,
+  "assoc_max_cat_num": 0.10739386175502785,
+  "k5_s1_split": [
+    0,
+    0,
+    0,
+    303,
+    378
+  ],
+  "top_assoc_pairs": [
+    [
+      "Total spend",
+      "Avg unit price",
+      0.6975661458915365
+    ],
+    [
+      "Units bought",
+      "Total spend",
+      0.5829920519185503
+    ],
+    [
+      "Units bought",
+      "Avg unit price",
+      0.12894671014503242
+    ],
+    [
+      "Client type",
+      "Age",
+      0.10739386175502785
+    ],
+    [
+      "Country (US/Intl)",
+      "Units bought",
+      0.0543423035012854
+    ],
+    [
+      "Age",
+      "Units bought",
+      0.051980904765142125
+    ]
+  ]
+}

@@ -1,0 +1,5 @@
+persona,claim,test,observed,p_value,effect,effect_name
+C1 Global Investors,International buyers skew towards investment purchases,Chi-square: country group x purpose,Investment share: international 31.4% vs domestic 30.6%,0.7357882006371094,0.007545299812543643,Cramer's V
+C2 First-Time Buyers,Younger buyers are more loan-dependent,Mann-Whitney: age by loan status,Mean age: loan 54.9 vs no loan 56.0; loan rate under 35: 39.6% vs 36.8% overall,0.19106947111262584,0.035008986309851386,rank-biserial r
+C3 Corporate Buyers,Corporate clients purchase more units,Mann-Whitney: units by client type,Mean units: corporate 3.70 vs individual 3.65; 5+ units: 4.9% vs 6.1%,0.6667930249629446,-0.022396118552031608,rank-biserial r
+C4 Luxury Investors,High satisfaction goes with large investments,Spearman: satisfaction vs total spend,"rho = 0.041 (total spend), -0.005 (average unit price)",0.06391762743011292,0.0414369510484743,Spearman rho

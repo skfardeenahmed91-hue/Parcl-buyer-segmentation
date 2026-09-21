@@ -1,0 +1,22 @@
+{
+  "S1": {
+    "name": "Domestic Cash Home Buyers",
+    "label": "S1 - Domestic Cash Home Buyers",
+    "color": "#1F4E79"
+  },
+  "S2": {
+    "name": "Domestic Investors",
+    "label": "S2 - Domestic Investors",
+    "color": "#E07B39"
+  },
+  "S3": {
+    "name": "International Buyers",
+    "label": "S3 - International Buyers",
+    "color": "#2A9D8F"
+  },
+  "S4": {
+    "name": "Domestic Financed Home Buyers",
+    "label": "S4 - Domestic Financed Home Buyers",
+    "color": "#8E5EA2"
+  }
+}

@@ -1,0 +1,13 @@
+variable,kind,test,p_value,effect_size,effect_name
+age,numeric,Kruskal-Wallis,0.06129280372353195,0.002183893360099465,epsilon-squared
+satisfaction_score,numeric,Kruskal-Wallis,0.7696123275303428,0.0,epsilon-squared
+n_units,numeric,Kruskal-Wallis,0.050408571627992615,0.0024030898890539387,epsilon-squared
+total_spend,numeric,Kruskal-Wallis,0.011178064114909764,0.004059977791401085,epsilon-squared
+avg_price,numeric,Kruskal-Wallis,0.388250942282257,1.1004657974631856e-05,epsilon-squared
+share_office,numeric,Kruskal-Wallis,0.6687907536051108,0.0,epsilon-squared
+client_type,categorical,Chi-square,0.8703207447936805,0.018871171557302748,Cramer's V
+acquisition_purpose,categorical,Chi-square,0.0,0.8754373513917555,Cramer's V
+loan_applied,categorical,Chi-square,8.84059965920578e-230,0.7284737563896869,Cramer's V
+referral_channel,categorical,Chi-square,0.9195169622690345,0.0223717122061584,Cramer's V
+country,categorical,Chi-square,0.0,0.5773502691896257,Cramer's V
+gender,categorical,Chi-square,0.9196776947159697,0.015754647145665723,Cramer's V

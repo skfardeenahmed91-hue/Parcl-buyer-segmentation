@@ -1,0 +1,861 @@
+{
+ "res": {
+  "log": {
+   "raw_clients": 2000,
+   "raw_properties": 10000,
+   "missing_client_cells": 0,
+   "dup_client_ids": 0,
+   "dup_client_rows_ignoring_id": 0,
+   "dob_unparsed": 0,
+   "dob_slash_format": 1145,
+   "dob_dash_format": 855,
+   "dob_ambiguity_mean_abs_age_diff": 0.1394866529774128,
+   "dob_ambiguity_max_abs_age_diff": 0.8870636550308006,
+   "dup_listing_ids": 0,
+   "sold_listings": 7305,
+   "available_listings": 2695,
+   "orphan_client_refs": 0,
+   "sold_without_client": 0,
+   "date_min": "2024-01-01",
+   "date_max": "2025-12-01"
+  },
+  "best_k": 4,
+  "elbow_k": 5,
+  "n_features": 37,
+  "n_clients": 2000,
+  "silhouette": 0.16453997592744338,
+  "silhouette_ward": 0.13357497761269618,
+  "davies_bouldin": 1.7989008250841918,
+  "calinski_harabasz": 321.34037809343346,
+  "stability": 0.9064324264359787,
+  "ward_ari": 0.7919951427441363,
+  "ward_agreement_pct": 0.9245,
+  "tree_acc": 1.0,
+  "tree_cv": 1.0,
+  "tree_rules": "|--- is_usa <= 0.50\n|   |--- class: S3\n|--- is_usa >  0.50\n|   |--- investment_purpose <= 0.50\n|   |   |--- loan_applied <= 0.50\n|   |   |   |--- class: S1\n|   |   |--- loan_applied >  0.50\n|   |   |   |--- class: S4\n|   |--- investment_purpose >  0.50\n|   |   |--- class: S2\n",
+  "pca_var": [
+   0.15380352780007617,
+   0.1454695290719966
+  ],
+  "top10_share": 0.15561824068462546,
+  "top20_share": 0.28019414602330917,
+  "portfolio_clients": 120,
+  "portfolio_rev_share": 0.09248233090519772,
+  "total_revenue": 2520750960.84,
+  "sold_units": 7305,
+  "listings_2024_per_month": 501.1666666666667,
+  "listings_2025_per_month": 332.1666666666667,
+  "sold_2024_per_month": 367.8333333333333,
+  "sold_2025_per_month": 240.91666666666666,
+  "sell_through": 0.7305,
+  "ppsf_mean": 302.40847103139697,
+  "ppsf_sd": 30.001312372504014,
+  "ppsf_office": 313.83625368618635,
+  "ppsf_apt": 300.42581958285524,
+  "ppsf_time_rho": 0.006806293570991298,
+  "ppsf_time_p": 0.5608116979997166,
+  "area_price_r": 0.9601488337204386,
+  "assoc_median": 0.01129353475121909,
+  "assoc_max_cat_num": 0.10739386175502785,
+  "k5_s1_split": [
+   0,
+   0,
+   0,
+   303,
+   378
+  ],
+  "top_assoc_pairs": [
+   [
+    "Total spend",
+    "Avg unit price",
+    0.6975661458915365
+   ],
+   [
+    "Units bought",
+    "Total spend",
+    0.5829920519185503
+   ],
+   [
+    "Units bought",
+    "Avg unit price",
+    0.12894671014503242
+   ],
+   [
+    "Client type",
+    "Age",
+    0.10739386175502785
+   ],
+   [
+    "Country (US/Intl)",
+    "Units bought",
+    0.0543423035012854
+   ],
+   [
+    "Age",
+    "Units bought",
+    0.051980904765142125
+   ]
+  ]
+ },
+ "meta": {
+  "S1": {
+   "name": "Domestic Cash Home Buyers",
+   "label": "S1 - Domestic Cash Home Buyers",
+   "color": "#1F4E79"
+  },
+  "S2": {
+   "name": "Domestic Investors",
+   "label": "S2 - Domestic Investors",
+   "color": "#E07B39"
+  },
+  "S3": {
+   "name": "International Buyers",
+   "label": "S3 - International Buyers",
+   "color": "#2A9D8F"
+  },
+  "S4": {
+   "name": "Domestic Financed Home Buyers",
+   "label": "S4 - Domestic Financed Home Buyers",
+   "color": "#8E5EA2"
+  }
+ },
+ "desc": {
+  "age_mean": 55.60000273785078,
+  "age_sd": 17.349239329253965,
+  "age_min": 25.032169746748803,
+  "age_max": 94.88021902806295,
+  "age_corp": 47.605962135257805,
+  "age_ind": 56.03404922286242,
+  "n_corp": 103,
+  "n_ind": 1897,
+  "corp_age_p": 1.0886426787456472e-06,
+  "sat_mean": 3.029,
+  "sat_low_share": 0.387,
+  "sat_dist": {
+   "1": 0.1975,
+   "2": 0.1895,
+   "3": 0.202,
+   "4": 0.2085,
+   "5": 0.2025
+  },
+  "country_counts": {
+   "USA": 1538,
+   "UK": 95,
+   "Canada": 85,
+   "Germany": 56,
+   "France": 53,
+   "Belgium": 43,
+   "Mexico": 40,
+   "Australia": 39,
+   "Russia": 36,
+   "Denmark": 15
+  },
+  "usa_share": 0.769,
+  "n_regions": 57,
+  "california": 633,
+  "top_regions": {
+   "California": 633,
+   "Nevada": 143,
+   "Colorado": 118,
+   "Arizona": 108,
+   "Oregon": 96,
+   "Utah": 87
+  },
+  "male_share": 0.506,
+  "inv_share": 0.3075,
+  "loan_share": 0.368,
+  "ref": {
+   "Website": 0.5515,
+   "Agency": 0.3525,
+   "Client": 0.096
+  },
+  "units_dist": {
+   "3": 932,
+   "4": 948,
+   "5": 69,
+   "6": 16,
+   "7": 17,
+   "8": 12,
+   "9": 3,
+   "10": 1,
+   "11": 1,
+   "13": 1
+  },
+  "units_mean": 3.6525,
+  "share_3_4": 0.94,
+  "units_max": 13,
+  "spend_mean": 1260375.4804200002,
+  "spend_median": 1220893.165,
+  "spend_min": 463611.95,
+  "spend_max": 3653385.38,
+  "avg_price_mean": 347089.95586912986,
+  "price_mean": 345072.00011498976,
+  "price_min": 97402.8,
+  "price_max": 736652.27,
+  "area_mean": 1141.1478384668035,
+  "office_share_sold": 0.14784394250513347,
+  "office_share_client": 0.14872142857142856,
+  "tower_price_min": 277489.98048319324,
+  "tower_price_max": 403266.5211574074,
+  "tower_ppsf_min": 299.8190795169651,
+  "tower_ppsf_max": 304.62119787324326,
+  "tower_st_min": 0.6852589641434262,
+  "tower_st_max": 0.8003629764065335,
+  "ppsf_month_min": 299.324745245188,
+  "ppsf_month_max": 306.06872632374075,
+  "dec24_listed": 497,
+  "jan25_listed": 326,
+  "listed_drop": -0.3372131692716993,
+  "sold_drop": -0.34503851381966466,
+  "rev_2024": 1520982665.02,
+  "rev_2025": 999768295.8199999
+ },
+ "geo": {
+  "intl_5plus": 10,
+  "intl_n": 462,
+  "usa_5plus": 110,
+  "usa_n": 1538,
+  "fisher_p": 2.6949115637669595e-05,
+  "units_usa": 3.6775032509752927,
+  "units_intl": 3.569264069264069,
+  "spend_usa": 1269852.0486475942,
+  "spend_intl": 1228827.9437662337,
+  "spend_p": 0.009396855898326624,
+  "units_p": 0.022332775232883486,
+  "chi_inv_country_p": 0.5618057055881633,
+  "chi_loan_country_p": 0.427273391988315,
+  "us_region_seg_p": 0.3787360184087443,
+  "us_states": 15
+ },
+ "k5": {
+  "split": {
+   "3": 303,
+   "4": 378
+  },
+  "referral_by_cluster": {
+   "3": {
+    "Agency": 243,
+    "Client": 60,
+    "Website": 0
+   },
+   "4": {
+    "Agency": 0,
+    "Client": 0,
+    "Website": 378
+   }
+  }
+ },
+ "profile": {
+  "S1": {
+   "segment_name": "Domestic Cash Home Buyers",
+   "clients": 681,
+   "age_mean": 56.483799541882384,
+   "age_median": 57.28405201916495,
+   "satisfaction": 3.0602055800293684,
+   "units_mean": 3.688693098384728,
+   "spend_mean": 1283343.9691483113,
+   "spend_median": 1251975.85,
+   "avg_price": 350332.6784820526,
+   "avg_ppsf": 302.5602912510514,
+   "office_share": 0.145905297997809,
+   "pct_corporate": 0.0469897209985315,
+   "pct_investment": 0.0,
+   "pct_loan": 0.0,
+   "pct_usa": 1.0,
+   "pct_california": 0.4155653450807636,
+   "pct_portfolio": 0.0748898678414096,
+   "total_revenue": 873957242.99,
+   "mean_silhouette": 0.225401732972161,
+   "ward_agreement": 1.0,
+   "client_share": 0.3405,
+   "revenue_share": 0.3467051115191354,
+   "pct_ref_website": 0.5550660792951542,
+   "pct_ref_agency": 0.3568281938325991,
+   "pct_ref_client": 0.0881057268722467
+  },
+  "S2": {
+   "segment_name": "Domestic Investors",
+   "clients": 470,
+   "age_mean": 54.740728443065805,
+   "age_median": 53.634496919917865,
+   "satisfaction": 3.0404255319148934,
+   "units_mean": 3.6531914893617023,
+   "spend_mean": 1249794.1410212766,
+   "spend_median": 1211874.42,
+   "avg_price": 344396.18128733605,
+   "avg_ppsf": 303.09836774147965,
+   "office_share": 0.1593397500844309,
+   "pct_corporate": 0.0574468085106383,
+   "pct_investment": 1.0,
+   "pct_loan": 0.376595744680851,
+   "pct_usa": 1.0,
+   "pct_california": 0.4042553191489361,
+   "pct_portfolio": 0.0638297872340425,
+   "total_revenue": 587403246.28,
+   "mean_silhouette": 0.1135607939032599,
+   "ward_agreement": 0.8425531914893617,
+   "client_share": 0.235,
+   "revenue_share": 0.233027084152834,
+   "pct_ref_website": 0.5340425531914894,
+   "pct_ref_agency": 0.3638297872340426,
+   "pct_ref_client": 0.102127659574468
+  },
+  "S3": {
+   "segment_name": "International Buyers",
+   "clients": 462,
+   "age_mean": 54.245464323493074,
+   "age_median": 54.49555099247091,
+   "satisfaction": 3.023809523809524,
+   "units_mean": 3.569264069264069,
+   "spend_mean": 1228827.9437662335,
+   "spend_median": 1174914.14,
+   "avg_price": 345859.8656673741,
+   "avg_ppsf": 301.9599158302371,
+   "office_share": 0.1496727478870335,
+   "pct_corporate": 0.0497835497835497,
+   "pct_investment": 0.3138528138528138,
+   "pct_loan": 0.3722943722943723,
+   "pct_usa": 0.0,
+   "pct_california": 0.0,
+   "pct_portfolio": 0.0216450216450216,
+   "total_revenue": 567718510.02,
+   "mean_silhouette": 0.0781245289698777,
+   "ward_agreement": 0.9588744588744588,
+   "client_share": 0.231,
+   "revenue_share": 0.225218007982358,
+   "pct_ref_website": 0.5692640692640693,
+   "pct_ref_agency": 0.3354978354978355,
+   "pct_ref_client": 0.0952380952380952
+  },
+  "S4": {
+   "segment_name": "Domestic Financed Home Buyers",
+   "clients": 387,
+   "age_mean": 56.70540336430218,
+   "age_median": 57.379876796714576,
+   "satisfaction": 2.96640826873385,
+   "units_mean": 3.6873385012919897,
+   "spend_mean": 1270470.184883721,
+   "spend_median": 1246764.72,
+   "avg_price": 346123.75852353266,
+   "avg_ppsf": 302.3604033371408,
+   "office_share": 0.1396456256921373,
+   "pct_corporate": 0.0542635658914728,
+   "pct_investment": 0.0,
+   "pct_loan": 1.0,
+   "pct_usa": 1.0,
+   "pct_california": 0.4134366925064599,
+   "pct_portfolio": 0.0749354005167958,
+   "total_revenue": 491671961.55,
+   "mean_silhouette": 0.2225174836750113,
+   "ward_agreement": 0.8501291989664083,
+   "client_share": 0.1935,
+   "revenue_share": 0.1950497963456723,
+   "pct_ref_website": 0.5452196382428941,
+   "pct_ref_agency": 0.3514211886304909,
+   "pct_ref_client": 0.1033591731266149
+  }
+ },
+ "profile_overall": {
+  "clients": 2000,
+  "client_share": 1.0,
+  "revenue_share": 1.0,
+  "pct_usa": 0.769,
+  "pct_investment": 0.3075,
+  "pct_loan": 0.368,
+  "pct_corporate": 0.0515,
+  "age_mean": 55.60000273785078,
+  "satisfaction": 3.029,
+  "units_mean": 3.6525,
+  "avg_price": 347089.95586912986,
+  "spend_mean": 1260375.4804200002,
+  "office_share": 0.14872142857142856,
+  "pct_portfolio": 0.06,
+  "pct_ref_website": 0.5515,
+  "pct_ref_agency": 0.3525,
+  "pct_ref_client": 0.096,
+  "mean_silhouette": 0.16453997592744335,
+  "ward_agreement": 0.9245
+ },
+ "model_selection": [
+  {
+   "k": 2,
+   "inertia": 5149.589759741864,
+   "silhouette_kmeans": 0.1646931706626251,
+   "silhouette_ward": 0.1762173484956314,
+   "davies_bouldin": 2.2385749129713783,
+   "calinski_harabasz": 361.3654528861172,
+   "stability_ari": 0.8006126431002746,
+   "stability_sd": 0.3987755984793802,
+   "kmeans_vs_ward_ari": -0.0026819672557621,
+   "smallest_cluster": 736,
+   "mean_rank": null
+  },
+  {
+   "k": 3,
+   "inertia": 4533.7195650499325,
+   "silhouette_kmeans": 0.1727579651123641,
+   "silhouette_ward": 0.1464915921751701,
+   "davies_bouldin": 1.9920850479339391,
+   "calinski_harabasz": 340.76272218454426,
+   "stability_ari": 0.8431879499744566,
+   "stability_sd": 0.2847578821728614,
+   "kmeans_vs_ward_ari": 0.3659845062443799,
+   "smallest_cluster": 462,
+   "mean_rank": 4.0
+  },
+  {
+   "k": 4,
+   "inertia": 4100.512023040148,
+   "silhouette_kmeans": 0.1645399759274433,
+   "silhouette_ward": 0.1335749776126961,
+   "davies_bouldin": 1.7989008250841918,
+   "calinski_harabasz": 321.34037809343346,
+   "stability_ari": 0.9064324264359788,
+   "stability_sd": 0.1641555814254291,
+   "kmeans_vs_ward_ari": 0.7919951427441363,
+   "smallest_cluster": 387,
+   "mean_rank": 2.4
+  },
+  {
+   "k": 5,
+   "inertia": 3816.615785362286,
+   "silhouette_kmeans": 0.1426424361117843,
+   "silhouette_ward": 0.1245355488418736,
+   "davies_bouldin": 1.6972069987605956,
+   "calinski_harabasz": 295.90172608191074,
+   "stability_ari": 0.8493658535620696,
+   "stability_sd": 0.1181127328281576,
+   "kmeans_vs_ward_ari": 0.8134608670863985,
+   "smallest_cluster": 303,
+   "mean_rank": 2.6
+  },
+  {
+   "k": 6,
+   "inertia": 3593.531033979007,
+   "silhouette_kmeans": 0.1630624668328371,
+   "silhouette_ward": 0.1258655062877972,
+   "davies_bouldin": 1.7463275982486783,
+   "calinski_harabasz": 276.0482319375672,
+   "stability_ari": 0.843322754444156,
+   "stability_sd": 0.0988365849065919,
+   "kmeans_vs_ward_ari": 0.7840321804219715,
+   "smallest_cluster": 177,
+   "mean_rank": 3.4
+  },
+  {
+   "k": 7,
+   "inertia": 3389.131939022268,
+   "silhouette_kmeans": 0.183128197743397,
+   "silhouette_ward": 0.14176724548082,
+   "davies_bouldin": 1.8843160858867196,
+   "calinski_harabasz": 263.8246559133653,
+   "stability_ari": 0.8045554873696914,
+   "stability_sd": 0.0980972621724535,
+   "kmeans_vs_ward_ari": 0.6104207384195713,
+   "smallest_cluster": 172,
+   "mean_rank": 4.6
+  },
+  {
+   "k": 8,
+   "inertia": 3215.366070386173,
+   "silhouette_kmeans": 0.1921294746972675,
+   "silhouette_ward": 0.156046199026707,
+   "davies_bouldin": 1.8339588401747664,
+   "calinski_harabasz": 253.61560973148943,
+   "stability_ari": 0.8405792052070732,
+   "stability_sd": 0.0732512798188906,
+   "kmeans_vs_ward_ari": 0.7212726402851319,
+   "smallest_cluster": 172,
+   "mean_rank": 4.0
+  },
+  {
+   "k": 9,
+   "inertia": 3083.615484470693,
+   "silhouette_kmeans": 0.2045571644403084,
+   "silhouette_ward": 0.1667881869349729,
+   "davies_bouldin": 1.782459577468586,
+   "calinski_harabasz": 241.91241720910105,
+   "stability_ari": 0.8678875521530308,
+   "stability_sd": 0.0779995634428863,
+   "kmeans_vs_ward_ari": 0.7172511563152748,
+   "smallest_cluster": 115,
+   "mean_rank": null
+  },
+  {
+   "k": 10,
+   "inertia": 2987.672446143727,
+   "silhouette_kmeans": 0.2123936549733371,
+   "silhouette_ward": 0.1808040827135469,
+   "davies_bouldin": 1.786910891614534,
+   "calinski_harabasz": 228.92768030412032,
+   "stability_ari": 0.7578512934342547,
+   "stability_sd": 0.0996000749531045,
+   "kmeans_vs_ward_ari": 0.6677608066192249,
+   "smallest_cluster": 121,
+   "mean_rank": null
+  }
+ ],
+ "hypotheses": [
+  {
+   "persona": "C1 Global Investors",
+   "claim": "International buyers skew towards investment purchases",
+   "test": "Chi-square: country group x purpose",
+   "observed": "Investment share: international 31.4% vs domestic 30.6%",
+   "p_value": 0.7357882006371094,
+   "effect": 0.0075452998125436,
+   "effect_name": "Cramer's V"
+  },
+  {
+   "persona": "C2 First-Time Buyers",
+   "claim": "Younger buyers are more loan-dependent",
+   "test": "Mann-Whitney: age by loan status",
+   "observed": "Mean age: loan 54.9 vs no loan 56.0; loan rate under 35: 39.6% vs 36.8% overall",
+   "p_value": 0.1910694711126258,
+   "effect": 0.0350089863098513,
+   "effect_name": "rank-biserial r"
+  },
+  {
+   "persona": "C3 Corporate Buyers",
+   "claim": "Corporate clients purchase more units",
+   "test": "Mann-Whitney: units by client type",
+   "observed": "Mean units: corporate 3.70 vs individual 3.65; 5+ units: 4.9% vs 6.1%",
+   "p_value": 0.6667930249629446,
+   "effect": -0.0223961185520316,
+   "effect_name": "rank-biserial r"
+  },
+  {
+   "persona": "C4 Luxury Investors",
+   "claim": "High satisfaction goes with large investments",
+   "test": "Spearman: satisfaction vs total spend",
+   "observed": "rho = 0.041 (total spend), -0.005 (average unit price)",
+   "p_value": 0.0639176274301129,
+   "effect": 0.0414369510484743,
+   "effect_name": "Spearman rho"
+  }
+ ],
+ "seg_diff": [
+  {
+   "variable": "age",
+   "kind": "numeric",
+   "test": "Kruskal-Wallis",
+   "p_value": 0.0612928037235319,
+   "effect_size": 0.0021838933600994,
+   "effect_name": "epsilon-squared"
+  },
+  {
+   "variable": "satisfaction_score",
+   "kind": "numeric",
+   "test": "Kruskal-Wallis",
+   "p_value": 0.7696123275303428,
+   "effect_size": 0.0,
+   "effect_name": "epsilon-squared"
+  },
+  {
+   "variable": "n_units",
+   "kind": "numeric",
+   "test": "Kruskal-Wallis",
+   "p_value": 0.0504085716279926,
+   "effect_size": 0.0024030898890539,
+   "effect_name": "epsilon-squared"
+  },
+  {
+   "variable": "total_spend",
+   "kind": "numeric",
+   "test": "Kruskal-Wallis",
+   "p_value": 0.0111780641149097,
+   "effect_size": 0.004059977791401,
+   "effect_name": "epsilon-squared"
+  },
+  {
+   "variable": "avg_price",
+   "kind": "numeric",
+   "test": "Kruskal-Wallis",
+   "p_value": 0.388250942282257,
+   "effect_size": 1.1004657974631856e-05,
+   "effect_name": "epsilon-squared"
+  },
+  {
+   "variable": "share_office",
+   "kind": "numeric",
+   "test": "Kruskal-Wallis",
+   "p_value": 0.6687907536051108,
+   "effect_size": 0.0,
+   "effect_name": "epsilon-squared"
+  },
+  {
+   "variable": "client_type",
+   "kind": "categorical",
+   "test": "Chi-square",
+   "p_value": 0.8703207447936805,
+   "effect_size": 0.0188711715573027,
+   "effect_name": "Cramer's V"
+  },
+  {
+   "variable": "acquisition_purpose",
+   "kind": "categorical",
+   "test": "Chi-square",
+   "p_value": 0.0,
+   "effect_size": 0.8754373513917555,
+   "effect_name": "Cramer's V"
+  },
+  {
+   "variable": "loan_applied",
+   "kind": "categorical",
+   "test": "Chi-square",
+   "p_value": 8.84059965920578e-230,
+   "effect_size": 0.7284737563896869,
+   "effect_name": "Cramer's V"
+  },
+  {
+   "variable": "referral_channel",
+   "kind": "categorical",
+   "test": "Chi-square",
+   "p_value": 0.9195169622690345,
+   "effect_size": 0.0223717122061584,
+   "effect_name": "Cramer's V"
+  },
+  {
+   "variable": "country",
+   "kind": "categorical",
+   "test": "Chi-square",
+   "p_value": 0.0,
+   "effect_size": 0.5773502691896257,
+   "effect_name": "Cramer's V"
+  },
+  {
+   "variable": "gender",
+   "kind": "categorical",
+   "test": "Chi-square",
+   "p_value": 0.9196776947159696,
+   "effect_size": 0.0157546471456657,
+   "effect_name": "Cramer's V"
+  }
+ ],
+ "importance": [
+  {
+   "feature": "is_usa",
+   "importance": 0.3549
+  },
+  {
+   "feature": "investment_purpose",
+   "importance": 0.32505
+  },
+  {
+   "feature": "loan_applied",
+   "importance": 0.24835
+  },
+  {
+   "feature": "corporate",
+   "importance": 0.0
+  },
+  {
+   "feature": "age",
+   "importance": 0.0
+  },
+  {
+   "feature": "satisfaction",
+   "importance": 0.0
+  },
+  {
+   "feature": "units",
+   "importance": 0.0
+  },
+  {
+   "feature": "avg_price",
+   "importance": 0.0
+  },
+  {
+   "feature": "office_share",
+   "importance": 0.0
+  },
+  {
+   "feature": "california",
+   "importance": 0.0
+  },
+  {
+   "feature": "ref_website",
+   "importance": 0.0
+  },
+  {
+   "feature": "ref_agency",
+   "importance": 0.0
+  },
+  {
+   "feature": "ref_client",
+   "importance": 0.0
+  }
+ ],
+ "design": [
+  {
+   "design": "A. PRD-literal: age + satisfaction (MinMax) + one-hot",
+   "silhouette_k4": 0.172239402123918,
+   "stability_k4": 0.8182738146077729,
+   "ward_ari_k4": 0.7953013995835382,
+   "smallest_k4": 387,
+   "best_k": 10,
+   "silhouette_best": 0.2281193377003838,
+   "smallest_best": 115
+  },
+  {
+   "design": "B. Chosen: 5 numeric features (MinMax) + one-hot",
+   "silhouette_k4": 0.1645399759274433,
+   "stability_k4": 0.9099183898770776,
+   "ward_ari_k4": 0.7919951427441363,
+   "smallest_k4": 387,
+   "best_k": 10,
+   "silhouette_best": 0.2123936549733371,
+   "smallest_best": 121
+  },
+  {
+   "design": "C. 5 numeric features (Standard) + one-hot",
+   "silhouette_k4": 0.0904196829874804,
+   "stability_k4": 0.7118253347918355,
+   "ward_ari_k4": 0.1470724904644026,
+   "smallest_k4": 432,
+   "best_k": 2,
+   "silhouette_best": 0.1055020583953311,
+   "smallest_best": 895
+  },
+  {
+   "design": "D. Everything standardised, one-hot included",
+   "silhouette_k4": 0.0691467253594717,
+   "stability_k4": 0.5040161737839125,
+   "ward_ari_k4": 0.2956953322617382,
+   "smallest_k4": 65,
+   "best_k": 3,
+   "silhouette_best": 0.1913301106083897,
+   "smallest_best": 103
+  },
+  {
+   "design": "E. Equal-variance blocks",
+   "silhouette_k4": 0.1146917053337079,
+   "stability_k4": 0.8105765247885852,
+   "ward_ari_k4": 0.3456794895761942,
+   "smallest_k4": 103,
+   "best_k": 3,
+   "silhouette_best": 0.129408530954271,
+   "smallest_best": 103
+  }
+ ],
+ "silhouette_by_segment": {
+  "S1": 0.22540173297216098,
+  "S2": 0.11356079390325989,
+  "S3": 0.0781245289698777,
+  "S4": 0.22251748367501134
+ },
+ "inv_vs_personal": {
+  "investment": {
+   "n": 615,
+   "units": 3.653658536585366,
+   "spend": 1253141.7883252033,
+   "spend_median": 1206585.87,
+   "avg_price": 344844.7115835362,
+   "ppsf": 303.1473127780471,
+   "office": 0.1569925151632469,
+   "loan": 0.3804878048780488,
+   "corp": 0.05853658536585366,
+   "sat": 3.0390243902439025,
+   "age": 54.799067350016415,
+   "portfolio": 0.056910569105691054,
+   "usa": 0.7642276422764228
+  },
+  "personal": {
+   "n": 1385,
+   "units": 3.651985559566787,
+   "spend": 1263587.5530830324,
+   "spend_median": 1235094.73,
+   "avg_price": 348086.94159883383,
+   "ppsf": 302.2261018245527,
+   "office": 0.14504870781044066,
+   "loan": 0.3624548736462094,
+   "corp": 0.04837545126353791,
+   "sat": 3.0245487364620938,
+   "age": 55.95565274761117,
+   "portfolio": 0.061371841155234655,
+   "usa": 0.7711191335740072
+  },
+  "p_spend": 0.1429334581108435,
+  "p_units": 0.36295802368978225,
+  "p_price": 0.37481111144949897,
+  "p_office": 0.3925044580075602,
+  "p_loan": 0.44031021051217856
+ },
+ "versions": {
+  "python": "3.12.3",
+  "sklearn": "1.8.0",
+  "scipy": "1.17.1",
+  "pandas": "3.0.2",
+  "numpy": "2.4.4",
+  "matplotlib": "3.10.8",
+  "plotly": "7.1.0",
+  "streamlit": "1.64.0"
+ },
+ "seg_change": {
+  "S1": -0.3527868852459016,
+  "S2": -0.3458574181117534,
+  "S3": -0.3526473526473527,
+  "S4": -0.3211764705882353
+ },
+ "images": {
+  "fig01_client_profile": {
+   "path": "/home/claude/buyer_segmentation/figures/fig01_client_profile.png",
+   "w": 2008,
+   "h": 1171
+  },
+  "fig02_purchase_behaviour": {
+   "path": "/home/claude/buyer_segmentation/figures/fig02_purchase_behaviour.png",
+   "w": 2005,
+   "h": 661
+  },
+  "fig03_market_context": {
+   "path": "/home/claude/buyer_segmentation/figures/fig03_market_context.png",
+   "w": 2052,
+   "h": 683
+  },
+  "fig04_association": {
+   "path": "/home/claude/buyer_segmentation/figures/fig04_association.png",
+   "w": 1361,
+   "h": 1196
+  },
+  "fig05_model_selection": {
+   "path": "/home/claude/buyer_segmentation/figures/fig05_model_selection.png",
+   "w": 2052,
+   "h": 1214
+  },
+  "fig06_dendrogram": {
+   "path": "/home/claude/buyer_segmentation/figures/fig06_dendrogram.png",
+   "w": 1600,
+   "h": 789
+  },
+  "fig07_pca_importance": {
+   "path": "/home/claude/buyer_segmentation/figures/fig07_pca_importance.png",
+   "w": 2052,
+   "h": 838
+  },
+  "fig08_profile_heatmap": {
+   "path": "/home/claude/buyer_segmentation/figures/fig08_profile_heatmap.png",
+   "w": 1987,
+   "h": 1097
+  },
+  "fig09_composition": {
+   "path": "/home/claude/buyer_segmentation/figures/fig09_composition.png",
+   "w": 2095,
+   "h": 680
+  },
+  "fig10_geography": {
+   "path": "/home/claude/buyer_segmentation/figures/fig10_geography.png",
+   "w": 2095,
+   "h": 994
+  },
+  "fig11_hypotheses": {
+   "path": "/home/claude/buyer_segmentation/figures/fig11_hypotheses.png",
+   "w": 1806,
+   "h": 780
+  },
+  "fig12_time_and_k5": {
+   "path": "/home/claude/buyer_segmentation/figures/fig12_time_and_k5.png",
+   "w": 2052,
+   "h": 707
+  }
+ }
+}
