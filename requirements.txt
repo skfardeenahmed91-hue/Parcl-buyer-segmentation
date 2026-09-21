@@ -1,0 +1,10 @@
+# Lower bounds are the oldest versions the project was tested on (results identical to the newest).
+# Newest tested: pandas 3.0, numpy 2.4, scikit-learn 1.8, scipy 1.17, plotly 7.1, streamlit 1.64
+streamlit>=1.40
+pandas>=2.2
+numpy>=1.26
+scipy>=1.13
+scikit-learn>=1.5
+plotly>=5.24
+matplotlib>=3.8
+pillow>=10.0

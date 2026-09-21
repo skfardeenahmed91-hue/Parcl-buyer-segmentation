@@ -1,0 +1,7 @@
+# Raw client file contains names and dates of birth - do not publish it.
+# (The dashboard only needs data/processed, which holds no direct identifiers.)
+data/raw/
+__pycache__/
+*.pyc
+paper/render/
+node_modules/
